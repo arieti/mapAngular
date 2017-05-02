@@ -89,7 +89,7 @@ module.exports = function(app) {
 
         // ...include filter for HTML5 Verified Locations
         if(reqVerified){
-            query = query.where('htmlverified').equals("Yep (Thanks for giving us real data!)");
+            query = query.where('htmlverified').equals("Po(Faleminderit qe vendoset ta ndani me ne)");
         }
 
         // Execute Query and Return the Query Results

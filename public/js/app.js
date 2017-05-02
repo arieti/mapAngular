@@ -2,7 +2,7 @@
 var app = angular.module('meanMapApp', ['addCtrl', 'queryCtrl', 'geolocation', 'gservice', 'ngRoute'])
 
 // Configures Angular routing -- showing the relevant view and controller when needed.
-    .config(function($routeProvider){
+    .config(function($routeProvider, $locationProvider){
 
         // Join Team Control Panel
         $routeProvider.when('/join', {
@@ -15,5 +15,7 @@ var app = angular.module('meanMapApp', ['addCtrl', 'queryCtrl', 'geolocation', '
                 templateUrl: 'partials/queryForm.html',
 
             // All else forward to the Join Team Control Panel
-            }).otherwise({redirectTo:'/join'})
+            }).otherwise({redirectTo:'/join'});
+
+            $locationProvider.html5Mode(false).hashPrefix('');
     });

@@ -41,14 +41,14 @@ angular.module('gservice', [])
             else {
 
                 // Perform an AJAX call to get all of the records in the db.
-                $http.get('/users').success(function(response){
+                $http.get('/users').then(function(response){
 
                     // Then convert the results into map points
-                    locations = convertToMapPoints(response);
+                    locations = convertToMapPoints(response.data);
 
                     // Then initialize the map -- noting that no filter was used.
                     initialize(latitude, longitude, false);
-                }).error(function(){});
+                });
             }
         };
 

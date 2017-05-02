@@ -6,7 +6,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Join the Team! <span class="glyphicon glyphicon-map-marker"></span></h2>
+            <h2 class="panel-title text-center">Bashkohu Skuadres<span class="glyphicon glyphicon-map-marker"></span></h2>
         </div>
 
         <!-- Panel Body -->
@@ -17,52 +17,52 @@
 
                 <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                 <div class="form-group">
-                    <label for="username">Username <span class="badge">All fields required</span></label>
+                    <label for="username">Username <span class="badge">Ju lutem plotesoni te gjitha fushat</span></label>
                     <input type="text" class="form-control" id="username" placeholder="Ben" ng-model="formData.username" required>
                 </div>
-                <label class="radio control-label">Gender</label>
+                <label class="radio control-label">Gjinia</label>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
-                        Male
+                        <input type="radio" name="optionsRadios" id="radiomale" value="Mashkull" ng-model="formData.gender">
+                        Mashkull
                     </label>
                 </div>
                 <div class="radio" required>
                     <label>
-                        <input type="radio" name="optionsRadios" id="radiofemale" value="Female" ng-model="formData.gender">
-                        Female
+                        <input type="radio" name="optionsRadios" id="radiofemale" value="Femer" ng-model="formData.gender">
+                        Femer
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                        <input type="radio" name="optionsRadios" id="radioother" value="What's it to ya?" ng-model="formData.gender">
-                        What's it to ya?
+                        <input type="radio" name="optionsRadios" id="radioother" value="Nuk e di" ng-model="formData.gender">
+                        Nuk e di
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="age">Age</label>
-                    <input type="number" class="form-control" id="age" placeholder="72" ng-model="formData.age" required>
+                    <label for="age">Mosha</label>
+                    <input type="number" class="form-control" id="age" placeholder="24" ng-model="formData.age" required>
                 </div>
                 <div class="form-group">
-                    <label for="language">Favorite Language</label>
-                    <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
+                    <label for="language">Gjuha preferuar</label>
+                    <input type="text" class="form-control" id="language" placeholder="C++" ng-model="formData.favlang" required>
                 </div>
                 <div class="form-group">
-                    <label for="latitude">Latitude</label>
+                    <label for="latitude">Gjeresia</label>
                     <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="longitude">Longitude</label>
+                    <label for="longitude">Gjatesia</label>
                     <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
                 </div>
                 <div class="form-group">
                     <!-- Note RefreshLoc button tied to addCtrl. This requests a refresh of the HTML5 verified location. -->
-                    <label for="verified">HTML5 Verified Location? <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
-                    <input type="text" class="form-control" id="verified" placeholder= "Nope because come on privacy" ng-model="formData.htmlverified" readonly>
+                    <label for="verified">Lokacion i verifikuar? <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                    <input type="text" class="form-control" id="verified" placeholder= "Nuk ndihem rehat ta ndaj" ng-model="formData.htmlverified" readonly>
                 </div>
 
                 <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
-                <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
+                <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Posto</button>
             </form>
         </div>
     </div>

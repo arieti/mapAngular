@@ -6,7 +6,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Find People! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
+            <h2 class="panel-title text-center">Gjej njerez <span class="glyphicon glyphicon-search"></span></h2>
         </div>
 
         <!-- Panel Body -->
@@ -17,62 +17,62 @@
 
                 <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                 <div class="form-group">
-                    <label for="latitude">Your Latitude</label>
+                    <label for="latitude">Gjeresia</label>
                     <input type="text" class="form-control" id="latitude" placeholder="39.5" ng-model="formData.latitude" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="longitude">Your Longitude</label>
+                    <label for="longitude">Gjatesia</label>
                     <input type="text" class="form-control" id="longitude" placeholder="-98.35" ng-model="formData.longitude" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="distance">Max. Distance (miles)</label>
+                    <label for="distance">Distanca max (kilometra)</label>
                     <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
                 </div>
 
                 <!-- Note ng-true-value which translates check values into explicit gender strings -->
-                <label>Gender</label>
+                <label>Gjinia</label>
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkmale" value="Male" ng-model="formData.male" ng-true-value = "'Male'">
-                        Male
+                        <input type="checkbox" name="optionsRadios" id="checkmale" value="Mashkull" ng-model="formData.male" ng-true-value = "'Mashkull'">
+                        Mashkull
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkfemale" value="Female" ng-model="formData.female" ng-true-value="'Female'">
-                        Female
+                        <input type="checkbox" name="optionsRadios" id="checkfemale" value="Femer" ng-model="formData.female" ng-true-value="'Femer'">
+                        Femer
                     </label>
                     <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkother" value="What's it to ya?" ng-model="formData.other" ng-true-value="'What\'s it to ya?'">
-                        What's it to ya?
+                        <input type="checkbox" name="optionsRadios" id="checkother" value="Cfaredo" ng-model="formData.other" ng-true-value="'Cfaredo'">
+                        Cfaredo
                     </label>
                 </div>
                 <div class="form-group">
-                    <label for="minage">Min. Age</label>
+                    <label for="minage">Mosha minimum</label>
                     <input type="number" class="form-control" id="minage" placeholder="5" ng-model="formData.minage">
                 </div>
                 <div class="form-group">
-                    <label for="maxage">Max Age</label>
+                    <label for="maxage">Mosha maximum</label>
                     <input type="number" class="form-control" id="maxage" placeholder="80" ng-model="formData.maxage">
                 </div>
                 <div class="form-group">
-                    <label for="favlang">Favorite Language</label>
-                    <input type="text" class="form-control" id="favlang" placeholder="Fortran" ng-model="formData.favlang">
+                    <label for="favlang">Gjuha preferuar</label>
+                    <input type="text" class="form-control" id="favlang" placeholder="C++" ng-model="formData.favlang">
                 </div>
                 <div class="form-group">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="verified" id="radiomale" value="True" ng-model="formData.verified"> <strong>Include Only HTML5 Verified Locations?</strong>
+                            <input type="checkbox" name="verified" id="radiomale" value="True" ng-model="formData.verified"> <strong>Vetem lokacionet e verifikuar?</strong>
                         </label>
                     </div>
                 </div>
 
                 <!-- Query button. Note that its tied to queryUsers() function from queryCtrl.  -->
-                <button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>
+                <button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Kerko</button>
             </form>
         </div>
 
         <!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
         <div ng-show="queryCount>0" class="panel-footer">
-            <p class="text-center">Hot Dang! We Found {{queryCount}} Teammates.</p>
+            <p class="text-center">Gjetem {{queryCount}} njerez te tjere.</p>
         </div>
     </div>
 </div>
